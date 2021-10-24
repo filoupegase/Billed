@@ -18,7 +18,7 @@
 
 .blue-border {
   box-sizing: border-box;
-  border: 2px solid #0d5ae5 !important;
+  border: 2px solid #5e89de !important;
   border-radius: 5px;
 
   opacity: 0.5;
@@ -49,25 +49,25 @@ label {
   line-height: 26px;
   letter-spacing: 0.2px;
 
-  background-color: #0e5ae5;
+  background-color: #5e89de;
 }
 
 textarea,
 input,
 select {
-  color: #0e5ae5 !important;
+  color: #5e89de !important;
   opacity: 0.7 !important;
 }
 
 textarea:focus,
 input:focus,
 select:focus {
-  color: #0e5ae5 !important;
+  color: #5e89de !important;
   opacity: 1 !important;
 }
 
 *[placeholder] {
-  color: #0e5ae5 !important;
+  color: #5e89de !important;
 }
 
 .error-message {

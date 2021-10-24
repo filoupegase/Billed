@@ -44,7 +44,7 @@
   letter-spacing: 0.2px;
   line-height: 26px;
 
-  background-color: #0e5ae5;
+  background-color: #5e89de;
 }
 
 #data-table {
@@ -97,7 +97,7 @@ tr td:first-of-type {
 
 tr td:nth-of-type(2),
 tr td:nth-of-type(5) {
-  color: #0e5ae5;
+  color: #5e89de;
   font-weight: 500;
 }
 
