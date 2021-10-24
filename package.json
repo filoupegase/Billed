@@ -5,6 +5,9 @@
     "test": "jest --coverage --noStackTrace --silent",
     "serv": "live-server"
   },
+  "gitHooks": {
+    "pre-commit": "npm run test"
+  },
   "jest": {
     "verbose": false,
     "setupFiles": [
@@ -23,7 +26,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "jquery": "^3.5.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "yorkie": "^2.0.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.10.4",
