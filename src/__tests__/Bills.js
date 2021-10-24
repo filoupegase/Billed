@@ -23,7 +23,7 @@ describe("GIVEN I am connected as Employee", () => {
         })
       );
 
-      document.body.innerHTML = BillsUI({data: []});
+      document.body.innerHTML = BillsUI({ data: [] });
 
       const billIcon = screen.getByTestId("icon-window");
 
@@ -31,7 +31,7 @@ describe("GIVEN I am connected as Employee", () => {
     });
 
     test("THEN bills should be ordered from earliest to latest", () => {
-      document.body.innerHTML = BillsUI({data: bills});
+      document.body.innerHTML = BillsUI({ data: bills });
 
       const dates = screen
         .getAllByText(
@@ -54,7 +54,7 @@ describe("GIVEN I am connected as Employee", () => {
 
   describe("WHEN I am on Bills page and there are no bills", () => {
     test("THEN the bills table should be empty", () => {
-      const html = BillsUI({data: []});
+      const html = BillsUI({ data: [] });
       document.body.innerHTML = html;
 
       const eyeIcon = screen.queryByTestId("icon-eye");
@@ -65,7 +65,7 @@ describe("GIVEN I am connected as Employee", () => {
 
   describe("WHEN I am on Bills page but it is loading", () => {
     test("THEN Loading page should be rendered", () => {
-      const html = BillsUI({loading: true});
+      const html = BillsUI({ loading: true });
       document.body.innerHTML = html;
 
       expect(screen.getAllByText("Loading...")).toBeTruthy();
@@ -74,7 +74,7 @@ describe("GIVEN I am connected as Employee", () => {
 
   describe("WHEN I am on Bills page but back-end send an error message", () => {
     test("THEN Error page should be rendrered", () => {
-      const html = BillsUI({error: "some error message"});
+      const html = BillsUI({ error: "some error message" });
       document.body.innerHTML = html;
 
       expect(screen.getAllByText("Erreur")).toBeTruthy();
@@ -93,10 +93,10 @@ describe("GIVEN I am connected as Employee", () => {
         })
       );
 
-      document.body.innerHTML = BillsUI({bills});
+      document.body.innerHTML = BillsUI({ bills });
 
       const onNavigate = (pathname) => {
-        document.body.innerHTML = ROUTES({pathname});
+        document.body.innerHTML = ROUTES({ pathname });
       };
 
       const firestore = null;
@@ -131,10 +131,10 @@ describe("GIVEN I am connected as Employee", () => {
         })
       );
 
-      document.body.innerHTML = BillsUI({data: bills});
+      document.body.innerHTML = BillsUI({ data: bills });
 
       const onNavigate = (pathname) => {
-        document.body.innerHTML = ROUTES({pathname});
+        document.body.innerHTML = ROUTES({ pathname });
       };
 
       const firestore = null;
@@ -165,7 +165,7 @@ describe("GIVEN I am connected as Employee", () => {
 // Test d'intégration GET:
 describe("GIVEN I am a user connected as Emplyee", () => {
   describe("WHEN I navigate to Bills page", () => {
-    test("THEN it fetches bills from mock API GET", async() => {
+    test("THEN it fetches bills from mock API GET", async () => {
       const getSpy = jest.spyOn(firebase, "get");
       const bills = await firebase.get();
 
@@ -174,12 +174,12 @@ describe("GIVEN I am a user connected as Emplyee", () => {
       expect(bills.data.length).toBe(4);
     });
 
-    test("THEN it fetches from an API and fails with 404 error message", async() => {
+    test("THEN it fetches from an API and fails with 404 error message", async () => {
       firebase.get.mockImplementationOnce(() => {
         Promise.reject(new Error("Erreur 404"));
       });
 
-      const html = BillsUI({error: "Erreur 404"});
+      const html = BillsUI({ error: "Erreur 404" });
       document.body.innerHTML = html;
 
       const message = screen.getByText(/Erreur 404/);
@@ -187,12 +187,12 @@ describe("GIVEN I am a user connected as Emplyee", () => {
       expect(message).toBeTruthy();
     });
 
-    test("THEN it fetches from an API and fails with 500 error message", async() => {
+    test("THEN it fetches from an API and fails with 500 error message", async () => {
       firebase.get.mockImplementationOnce(() => {
         Promise.reject(new Error("Erreur 500"));
       });
 
-      const html = BillsUI({error: "Erreur 500"});
+      const html = BillsUI({ error: "Erreur 500" });
       document.body.innerHTML = html;
 
       const message = screen.getByText(/Erreur 500/);

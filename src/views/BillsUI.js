@@ -23,13 +23,12 @@ const row = (bill) => {
 const rows = (data) => {
   return data && data.length
     ? sortBillsByDate(data)
-      .map((bill) => row(bill))
-      .join("")
+        .map((bill) => row(bill))
+        .join("")
     : "";
 };
 
-
-export default function BillsUI({data: bills, loading, error}) {
+export default function BillsUI({ data: bills, loading, error }) {
   const modal = () => `
     <div class="modal fade" id="modaleFile" data-testid="modaleFile" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">

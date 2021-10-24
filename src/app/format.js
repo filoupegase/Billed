@@ -1,16 +1,16 @@
 const FRENCH_MONTHS = {
   "Jan.": 0,
-  "Fev.": 1,
+  "Fév.": 1,
   "Mar.": 2,
   "Avr.": 3,
   "Mai.": 4,
   "Jui.": 5,
-  "Jul.": 6,
-  "Aou.": 7,
+  "Jui.": 6,
+  "Aoû.": 7,
   "Sep.": 8,
   "Oct.": 9,
   "Nov.": 10,
-  "Dec.": 11,
+  "Déc.": 11,
 };
 
 export const formatDate = (dateStr) => {

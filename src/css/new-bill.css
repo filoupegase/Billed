@@ -3,29 +3,31 @@
 }
 
 .col-half {
-  margin:auto;
   width: 75%;
+  margin: auto;
   margin-top: 16px;
 }
 
 .col-half-row {
-  display:flex;
+  display: flex;
+
   width: 75%;
   margin-left: 20px;
   margin-top: 16px;
 }
 
 .blue-border {
-  opacity: 0.5;
-  border: 2px solid #0D5AE5 !important;
   box-sizing: border-box;
+  border: 2px solid #0d5ae5 !important;
   border-radius: 5px;
+
+  opacity: 0.5;
 }
 
 label {
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
   line-height: 16px;
 }
 
@@ -39,25 +41,44 @@ label {
 
 #btn-send-bill {
   width: 100px;
-  background-color: #5481d9;
+  margin-top: 50px;
+
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
   line-height: 26px;
   letter-spacing: 0.2px;
-  margin-top: 50px;
+
+  background-color: #0e5ae5;
 }
 
-textarea, input, select {
-  color: #5481d9 !important;
+textarea,
+input,
+select {
+  color: #0e5ae5 !important;
   opacity: 0.7 !important;
 }
 
-textarea:focus, input:focus, select:focus {
-  color: #5481d9 !important;
+textarea:focus,
+input:focus,
+select:focus {
+  color: #0e5ae5 !important;
   opacity: 1 !important;
 }
 
 *[placeholder] {
-  color: #5481d9 !important;
+  color: #0e5ae5 !important;
+}
+
+.error-message {
+  margin: 4px 0;
+
+  color: white;
+  font-size: 14px;
+
+  transition: color 350ms;
+}
+
+.error-message.show {
+  color: red;
 }
