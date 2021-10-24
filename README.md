@@ -1,23 +1,8 @@
 **Comment lancer l'application en local** :
 
-Clonez le projet :
-```
-$ git clone https://github.com/OpenClassrooms-Student-Center/Billed-app-FR.git
-```
-
-Allez au repo cloné :
-```
-$ cd Billed-app-FR
-```
-
 Installez les packages npm (décrits dans `package.json`) :
 ```
 $ npm install
-```
-
-Installez live-server pour lancer un serveur local :
-```
-$ npm install -g live-server
 ```
 
 Lancez l'application :
@@ -36,10 +21,9 @@ $ npm run test
 
 **Comment lancer un seul test :**
 
-Installez jest-cli :
+Lancez :
 
 ```
-$npm i -g jest-cli
 $jest src/__tests__/your_test_file.js
 ```
 
