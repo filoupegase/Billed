@@ -1,5 +1,4 @@
 import ErrorPage from "../views/ErrorPage.js";
-
 import { screen } from "@testing-library/dom";
 
 describe("GIVEN I am connected on app (as an Employee or an HR admin)", () => {
