@@ -1,5 +1,6 @@
 import VerticalLayout from "./VerticalLayout.js";
 
+
 export default function ErrorPage(error) {
   return `
     <div class='layout'>

@@ -1,7 +1,6 @@
 import Login from "../containers/Login.js";
 import LoginUI from "../views/LoginUI";
 import { ROUTES } from "../constants/routes";
-
 import { fireEvent, screen } from "@testing-library/dom";
 
 describe("GIVEN that I am a user on login page", () => {
